@@ -1,0 +1,84 @@
+DATA DICTIONARY - RETAIL SALES DUMMY DATASET
+
+This file describes the columns in the retail_sales_dummy.csv dataset.
+
+1. Transaction_ID: Unique identifier for each transaction (string, e.g., TXN000001)
+   - Format: TXN followed by 6 digits
+   - No known issues
+
+2. Date: Date of the transaction (string, e.g., 2020-01-15)
+   - Format: Mostly YYYY-MM-DD, but 3% may be in MM/DD/YYYY format
+   - Date range: January 1, 2020 to December 31, 2024
+
+3. SKU_ID: Stock Keeping Unit identifier (string, e.g., SKU001)
+   - Format: SKU followed by 3 digits
+   - 50 unique SKUs in the dataset
+
+4. Product_Name: Descriptive name of the product (string, e.g., Elegant Dresses Harmony)
+   - Format: Adjective + Category_L2 + Word
+   - Issues: May contain typos (2% of rows), mixed case (5% of rows), or extra spaces (3% of rows)
+
+5. Category_L1: Primary product category (string, e.g., Clothing)
+   - Values: Clothing, Accessories, Footwear, Jewelry, Beauty, Unknown
+   - Issues: May contain spelling errors, mixed case, or be set to "Unknown" (2% of rows)
+
+6. Category_L2: Secondary product category (string, e.g., Dresses)
+   - Values: Varies by Category_L1 (e.g., Dresses, Tops, Pants for Clothing)
+   - No known issues
+
+7. Category_L3: Tertiary product category (string, e.g., Casual)
+   - Values: Casual, Formal, Seasonal
+   - No known issues
+
+8. Unit_Price: Price per unit (float, e.g., 49.99)
+   - Range: Mostly $10-$200, with outliers at $0.01 (0.5% of rows)
+   - Issues: Missing values (7% of rows)
+
+9. Unit_Cost: Cost per unit (float, e.g., 29.99)
+   - Range: 50-80% of Unit_Price
+   - No known issues
+
+10. Quantity_Sold: Number of units sold (integer, e.g., 3)
+    - Range: Mostly 1-10, with some 15-20 for bulk purchases, and outliers at 1000 (1% of rows)
+    - Seasonal pattern: Higher quantities for Clothing/Footwear in March-April
+
+11. Total_Sale_Amount: Total amount of the sale (float, e.g., 149.97)
+    - Calculation: Unit_Price × Quantity_Sold
+    - Issues: Logical errors (5% of rows deviate by ±20% from the correct calculation)
+
+12. Discount_Applied: Discount amount applied to the transaction (float, e.g., 10.00)
+    - Range: $0 for 80% of transactions, $0.01-$20 for 20%
+    - Seasonal pattern: More discounts in April and November
+    - Issues: Missing values (5% of rows)
+
+13. Promotion_ID: Identifier for the promotion applied (string, e.g., PROMO001)
+    - Format: PROMO followed by 3 digits (PROMO001-PROMO005)
+    - Present only when Discount_Applied > 0
+    - No known issues
+
+14. Payment_Method: Method of payment (string, e.g., Credit Card)
+    - Values: Cash (20%), Credit Card (40%), UPI (30%), Gift Card (10%)
+    - No known issues
+
+15. Store_ID: Unique identifier for the store (string, e.g., STR001)
+    - Format: STR followed by 3 digits
+    - Issues: May be set to "N/A" (2% of rows)
+
+16. Store_Location: City where the store is located (string, e.g., New York)
+    - Values: 15 unique city names
+    - Issues: Missing values (5% of rows), inconsistent formats (5% of rows), extra spaces (3% of rows)
+
+17. Region: Geographic region of the store (string, e.g., Northeast)
+    - Values: Northeast, West, South, Midwest
+    - No known issues
+
+18. Stock_On_Hand: Current inventory level (integer, e.g., 45)
+    - Range: 0-100, with 10% at 0 (out-of-stock)
+    - No known issues
+
+19. Customer_ID: Unique identifier for the customer (string, e.g., UUID)
+    - Format: UUID
+    - Present for 30% of transactions (loyalty program customers)
+    - Issues: Missing values (5% of rows in addition to the expected 70%)
+
+NOTE: This dataset contains intentional data quality issues for cleaning practice.
