@@ -74,6 +74,8 @@
 - Lower discount activity is observed in early-year and late-summer months.
 
 **Insight:** Discounts are strongly aligned with seasonal and festive periods rather than being evenly distributed.  
+
 ---
+
 
 
