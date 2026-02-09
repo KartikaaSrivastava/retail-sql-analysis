@@ -1,8 +1,8 @@
 ## Data Cleaning
--- 6.93% rows (approx) have unit price as null.
--- 5.02% rows have (approx) have discount value as null.
---4.99% rows have location value as null.
--- 130 rows have mismatched transactions.
+- 6.93% rows (approx) have unit price as null.
+-5.02% rows have (approx) have discount value as null.
+-4.99% rows have location value as null.
+-130 rows have mismatched transactions.
 
 ## Revenue Analysis
 
@@ -69,4 +69,5 @@
 - Lower discount activity is observed in early-year and late-summer months.
 
 **Insight:** Discounts are strongly aligned with seasonal and festive periods rather than being evenly distributed.  
+
 
