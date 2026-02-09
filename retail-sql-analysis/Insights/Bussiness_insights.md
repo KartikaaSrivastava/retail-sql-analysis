@@ -1,8 +1,9 @@
 ## Data Cleaning
+
 - 6.93% rows (approx) have unit price as null.
--5.02% rows have (approx) have discount value as null.
--4.99% rows have location value as null.
--130 rows have mismatched transactions.
+- 5.02% rows have (approx) have discount value as null.
+- 4.99% rows have location value as null.
+- 130 rows have mismatched transactions.
 
 ## Revenue Analysis
 
@@ -47,13 +48,16 @@
 
 **Insight:** Revenue is concentrated among a limited number of SKUs.  
 
+---
+
 ## Promotional Analysis
 
 ### Discount vs Non-Discount Performance
 - Discounted and non-discounted transactions show **similar average units sold**.
 - Discounted orders have a **slightly higher average order value**, but the difference is marginal.
 
-**Insight:** Discounts do not significantly increase purchase volume and provide limited uplift in order value.  
+**Insight:** Discounts do not significantly increase purchase volume and provide limited uplift in order value. 
+
 ---
 
 ### Promotion-wise Revenue Performance
@@ -62,6 +66,7 @@
 - No single promotion dramatically outperforms others.
 
 **Insight:** Promotional effectiveness varies, but higher discounts do not necessarily translate into higher revenue.  
+
 ---
 
 ### Seasonal Discount Trends
@@ -69,5 +74,6 @@
 - Lower discount activity is observed in early-year and late-summer months.
 
 **Insight:** Discounts are strongly aligned with seasonal and festive periods rather than being evenly distributed.  
+---
 
 
